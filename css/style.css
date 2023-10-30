@@ -1,0 +1,225 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* reset */
+*{margin: 0;padding: 0;}
+ul, ol{list-style-type: none;}
+a{text-decoration: none; color: inherit; display: block;}
+img{display: block;}
+body{font-family: 'Noto Sans KR', sans-serif;}
+
+
+/* common */
+.clearFloat::after{content: ""; display: block; clear: both;}
+#wrap{position: relative;}
+.preMarginColl::after,
+.preMarginColl::before{ content: ""; display: table;}
+.inner{width: 1170px; margin: 0 auto;}
+
+.title{display: flex; flex-direction: column; align-items: center; width: 600px; margin: 0 auto; text-align: center;}
+.title h2{margin: 20px 0;}
+.title p{color: #888;}
+.btn{color: #b68a5c; border: 2px solid #b68a5c; padding: 10px 20px; transition: .5s;}
+.btn:hover{background-color: white;}
+
+
+/* layout - height*/
+/* body * {outline: 1px dotted red;} */
+
+section {width: calc(100vw - (100vw - 100%)); box-sizing: border-box;}
+
+/* #product{height: unset !important;}
+#contact{height: unset !important;}
+#subscribe{height: unset !important;}
+ */
+ #map{height: 600px !important;}
+
+
+/* layout */
+
+#header-inner{width: 1820px; margin: 0 auto; position: fixed; z-index: 999;}
+
+#header-inner>* {float: left; color: white;}
+
+#header h1{ margin-left: 50px; width: 128px; height: 128px;}
+#header h1 a{ height: 128px; height: 100%; line-height: 128px; text-align: center;}
+
+#header ul>li {float: left;}
+
+#header .gnb-main{margin-top: 30px; margin-left: 390px;}
+
+
+#header .gnb-main>ul>li>a{ padding: 0 20px;}
+
+#header .sub-menu{float: right; margin-top: 30px;}
+#header .sub-menu>*{float: left;}
+#header .sub-menu .gnb-util { padding-left: 8px;}
+#header .sub-menu .gnb-util li{padding-left: 50px; }
+
+
+
+
+
+
+#welcome{background: url("https://picsum.photos/1920/1080") no-repeat center / cover; color: white; position: relative;}
+#welcome .text-contents{text-align: center; margin-top: 15%; }
+#welcome .text-contents strong{font-size: 72px;}
+#welcome .text-contents p{color: #ffc04b; margin-top: 20px;font-size: 20px; text-transform: uppercase;}
+#welcome .text-contents a{ margin-top: 30px; padding: 16px 30px;border: 2px solid white; display: inline-block; font-size: 20px; text-transform: uppercase; font-weight: 800; overflow: hidden;}
+#welcome .text-contents a:hover{ background-color: white;  transition: .5s;}
+#welcome .text-contents a:hover span{ transition: .5s; mix-blend-mode: multiply; color: black;}
+
+#welcome .img-slide-nav{ position: absolute; left: 60px;}
+#welcome .img-slide-nav a{ display: block; padding: 20px 0;}
+
+#welcome .reservation{ position: absolute; left: 0; right: 0; margin: 0 auto;  bottom: -20%;}
+#welcome .reservation .inner .reservation-content{ padding: 100px 180px; background-color: #b58a60;}
+.reservation-content > * {float: left; }
+.reservation-content .description h2{font-size: 40px;}
+.reservation-content .description {width: 44%;}
+.reservation-content .description p { font-size: 12px; color: #dddddd;}
+.reservation-content .description a{ margin-top: 30px; }
+.reservation-content .description a:hover{ text-decoration: underline; }
+.reservation-content .status{ margin-left: 30px;}
+.reservation-content .status ul>li{ float: left;  margin-left: 4px;}
+.reservation-content .status h3{ margin-bottom: 6px;}
+
+.talk-ballon{position: relative; background-color: white; border-radius: 2px; color: black;}
+.talk-ballon::after{content:""; position: absolute; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 10px solid white; top: -10px; left: 5px;}
+
+.talk-ballon span{ padding: 24px 50px; display: inline-block; font-size: 40px; font-weight: 800;}
+.status li:nth-of-type(3) .talk-ballon span{ padding: 24px 20px;}
+
+.status .guide {margin-top: 20px;}
+.status .guide p{font-size: 12px; float: left;}
+.status .guide a{font-size: 14px; float: right; font-weight: 800; }
+
+#intro .description{text-align: center; width: 30%; margin: 0 auto; margin-top: 16%;}
+#intro .description h2{ margin-bottom: 30px; }
+#intro .description img{display: block; margin: 0 auto;margin-bottom: 30px;}
+#intro .description a{ color: #b58a60; margin: 1% 0;}
+
+#intro {padding-bottom: 100px;}
+#intro .rooms {width: 1570px; margin: 0 auto;}
+#intro .rooms li{width: 370px; margin-right: 30px; text-align: center; float: left;}
+#intro .rooms li:last-of-type{margin-right: 0;}
+
+#intro .rooms li h3{ text-transform: uppercase; margin-top: 30px;}
+#intro .rooms li p{ padding: 10px 0; font-size: 14px; color: #ccc;}
+#intro .rooms li span{ color: #b58a60;}
+
+
+
+
+#product .products{width: 100%; }
+#product .products li{width: calc(25%); float: left; text-align: center; position: relative; background-color: rgba(0, 0, 0, 0.7); overflow: hidden; height: 600px; color: white; transition: .5s;}
+#product .products li>img{position: absolute; z-index: -1;}
+
+#product .products li .prd-description{margin-top: 47%; display: block;}
+#product .products li .prd-description img{margin: 0 auto;}
+#product .products li strong{text-transform: uppercase; padding: 16px 0; display: block; font-size: 22px; }
+#product .products li>a{text-transform: uppercase; color: #b3845a; border: 2px solid #b3845a; display: inline-block; padding: 10px 20px; font-weight: 600; position: absolute; bottom: 5%; left: calc(50%); transform: translateX(-50%);}
+
+#product .products li .hidden-description{display: none;}
+#product .products li .hidden-description strong {font-size: 20px; margin-top: 30%;}
+#product .products li .hidden-description p{ width: 80%;margin: 0 auto;}
+#product .products li .hidden-description a{ margin-top: 30px;}
+
+#product .products li .hidden-description a:hover{ text-decoration: underline;}
+#product .products li:hover{ background-color: rgba(153, 90, 18, 0.7); }
+#product .products li:hover>a{ color: white; border-color: white;}
+#product .products li>a:hover{ color: #b3845a; background-color: white; transition: .5s;}
+#product .products li:hover .prd-description { display: none; }
+#product .products li:hover .hidden-description { display:block}
+
+
+#services{text-align: center; background-color: #f5f5f5;}
+#services h2 { padding-top: 0; margin-bottom: 1%; margin-top: 2%;}
+#services h2 img{ margin: 20px auto; display: block;}
+#services>.services-menu {height: 64%; box-sizing: border-box;}
+#services>.services-menu p {width: 40%; margin: 0 auto;}
+
+#services .link-services { margin-top: 2%;}
+#services .link-services li { float: left; width: 370px;  background-color: white; margin-bottom: 30px; transition: .5s;}
+#services .link-services li:hover {background-color: #b68a5c; }
+
+#services .link-services li:nth-of-type(5),
+#services .link-services li:nth-of-type(2) { margin: 0 30px;}
+#services .link-services li a{ height: 100%; display: block; padding: 60px 0; text-transform: uppercase; font-weight: 700;}
+#services .link-services li:hover a { color: white; }
+
+#services>.events {width: 100%; bottom: 0; height: 36%; box-sizing: border-box;}
+#services .events>*{float: left;}
+
+#services .events>.main-picture {width: 40%; overflow: hidden; position: relative; height: 100%;}
+#services .events>.main-picture img {left: 0; top: 0;}
+#services .events>.main-picture strong {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 26px;}
+
+#services .events>.package{width: 30%; text-align: left; position: relative; padding-left: 3%; padding-top: 2%;padding-right: 2%; box-sizing: border-box; background-color: white; height: 100%; text-size-adjust: auto;}
+#services .events>.package span{ font-weight: 600;}
+#services .events>.package h3 { font-size: 3vh; margin-top: 3%; color: #b68a5c;}
+#services .events>.package p{ margin-top: 6%; color: #888; font-size: 1.2vh;}
+#services .events>.package a{margin-top: 6%; display: inline-block; padding: 10px 20px; margin-bottom: 4%; border: 2px solid rgb(182, 139, 93); color: #b68a5c;}
+#services .events>.package a:hover{border: 2px solid rgb(182, 139, 93); background-color: #b68a5c; color: white; transition: .5s;}
+
+
+
+#gallery { display: flex; flex-direction: column; align-items: center; background-color: #3d3a35; padding-bottom: 100px;}
+#gallery .title { margin: 40px auto; }
+#gallery .title h2{ color: white; }
+#gallery .gallery-pictures { display: flex; flex-wrap: wrap; justify-content: center; }
+#gallery .gallery-pictures>li { position: relative; }
+#gallery .gallery-pictures>li a { position: absolute; color: white; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 56px; background-color: rgba(236, 138, 26, 0.3); display: none; width: 80px;height: 80px; line-height: 80px; text-align: center; border-radius: 40px; display: none; transition: .5s;}
+#gallery .gallery-pictures>li:hover a { display: block;}
+#gallery .gallery-pictures>li a:hover { background-color: rgba(255, 255, 255, .8); color: #b68a5c;}
+#gallery .gallery-pictures>li img { transition: .5s;}
+#gallery .gallery-pictures>li:hover img {filter: brightness(30%);}
+
+#gallery >.btn { margin-top: 40px; }
+
+
+#contact .inner{display: flex; align-items: center; }
+
+#contact .inner .contact-title{display: flex; align-items: center; width: 380px; justify-content: space-between; margin: 60px 0;}
+#contact .inner .contact-title a{color: #b68a5c; font-weight: 800; }
+#contact .inner .travel-tips{flex: 7;}
+#contact .inner .travel-tips ul{display: flex; flex-direction: column; gap: 10px;}
+#contact .inner .travel-tips ul li{background-color: #f5f5f5; box-sizing: border-box;}
+#contact .inner .travel-tips ul li:hover{background-color: #fff; border: 2px solid #b68a5c; color: #b68a5c; box-sizing: border-box;}
+#contact .inner .travel-tips ul li a{padding: 20px; box-sizing: border-box; font-size: 16px;}
+#contact .inner .travel-tips ul li:hover a{padding: 18px 18px; }
+
+#contact .inner .question{ margin-left: 30px; background-color: #f5f5f5; flex: 5; padding: 100px 60px;}
+#contact .inner .question .contact-title{justify-content: flex-start; gap: 30px;}
+#contact .inner .question form {display: flex; flex-direction: column; gap: 10px;}
+#contact .inner .question form input {padding: 20px 20px; box-sizing: border-box; font-size: 16px; border: none; line-height: 24px;}
+
+
+#contact .inner .question form input[type=submit] {align-self: flex-end; background-color: #b68a5c; color: white; padding: 20px; box-sizing: border-box; font-weight: 600; transition: .5s; cursor: pointer;}
+#contact .inner .question form input[type=submit]:hover {background-color: white; color: #b68a5c; }
+
+#subscribe {background-color: #b68a5c; height: unset;}
+#subscribe .inner {display: flex; padding: 100px 0; justify-content: space-between; gap: 100px;}
+#subscribe .inner .title{flex-direction: row; margin: unset; width: unset; flex: 2;color: white;}
+#subscribe .inner .title h2{margin-left: 30px; letter-spacing: 3px;}
+#subscribe .inner form {display: flex; align-items: center; flex: 13; gap: 20px;}
+#subscribe .inner form input {padding: 20px; background-color: #a1754e;border: none; font-size: 16px; color: white; font-weight: 600;}
+#subscribe .inner form input::placeholder {color: rgb(207, 207, 207); }
+#subscribe .inner form input[name=email] {flex: 3;}
+#subscribe .inner form input[name=phone] {flex: 5;}
+#subscribe .inner form input[type=submit] {flex: 1; color: black; background-color: white; font-weight: 600; cursor: pointer; transition: .5s;}
+#subscribe .inner form input[type=submit]:hover {color: white; background-color: black;}
+
+
+#map{ background: url(https://documentation.maptiler.com/hc/article_attachments/7922420683921/create-map-multiple-default-markers.png) no-repeat center / cover; display: flex; flex-direction: column; justify-content: flex-end;}
+#map a{ margin-bottom: 30px; text-align: center; font-size: 36px; color: rgba(58, 58, 58, 0.7); align-items: center;}
+
+
+#footer{background-color: #3d3a35; color: #a3a099;}
+#footer h3{color: white; margin-bottom: 60px;}
+#footer .inner{display: flex; justify-content: space-between;  padding: 100px 0; }
+#footer .inner .logo{ width: 200px; display: flex; flex-direction: column; align-items: center; text-align: center;}
+#footer .inner .logo p{font-size: 12px; }
+#footer .inner .location{ width: 400px;}
+#footer .inner .footer-contact{ width: 200px;}
+#footer .inner .footer-contact a{ margin-bottom: 20px; }
